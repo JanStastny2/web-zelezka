@@ -46,10 +46,12 @@ header {
 
 
 article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: rgba(44, 43, 43, 0.9);
-  color: #FFFFFF;
   padding: 20px;
-  margin: auto;
+  margin: 20px auto;
   border-radius: 8px;
   max-width: 800px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -65,6 +67,10 @@ section {
   border-radius: 8px;
   max-width: 800px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+  color: #007ACC;
 }
 
 .tym {
@@ -85,17 +91,6 @@ p {
   line-height: 1.6;
   text-align: justify;
   margin-bottom: 10px;
-  color: #FFFFFF;
-}
-
-h1, h2 {
-  color: #0099ff;
-  text-align: center;
-}
-
-h1 {
-  font-size: 2rem;
-  margin-bottom: 15px;
 }
 
 span {
@@ -153,10 +148,27 @@ header img {
   width: 80px;
 }
 
-header h1 {
+h1, h2, h3 {
+  text-align: center;
   margin: 0;
-  padding: 10px 0 20px 0 ;
-  color: #FFFFFF;
+  font-size: 2rem;
+  padding: 10px 0 15px 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+header h1 {
+  padding: 10px 0 20px 0;
 }
 
 .hidden {
@@ -170,9 +182,6 @@ nav {
   min-width: 60vw;
   margin-bottom: 25px;
 }
-
-
-
 
 nav a {
   display: block;
@@ -263,11 +272,6 @@ footer {
   align-content: center;
 }
 
-#tymy h1 { 
-  color: #FFFFFF;
-  margin-top: 0;
-}
-
 #gallery {
   display: flex;
   flex-direction: row;
@@ -320,7 +324,6 @@ footer {
   }
 
   header h1 {
-    margin: 0;
     display: flex;
     padding: 30px;
     align-items: center;
@@ -341,10 +344,6 @@ footer {
     padding: 20px 0 20px;
     width: 100%;
     min-width: 14vw;
-  }
-
-  h1 {
-    font-size: 1.8rem;
   }
 
   p {
