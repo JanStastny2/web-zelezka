@@ -5,7 +5,7 @@ body {
   color: #FFFFFF;
   font-family: Arial, sans-serif;
   position: relative;
-  height: 100vw;
+  
 }
 
 body::before {
@@ -15,7 +15,7 @@ body::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url("images/gallery/482217145_1168191871768776_2617825102083883922_n.jpg") center/cover no-repeat;
+  background: url("images/482086951_1168191608435469_5323497860288220619_n.jpg") center/cover no-repeat;
   z-index: -1;
 }
 
@@ -26,7 +26,7 @@ body::after {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.3); 
+  background-color: rgba(0, 0, 0, 0.1); 
   z-index: -1;
 }
 
@@ -46,7 +46,7 @@ header {
 
 
 article {
-  background-color: #2A2B2D;
+  background-color: rgba(44, 43, 43, 0.9);
   color: #FFFFFF;
   padding: 20px;
   margin: auto;
@@ -59,7 +59,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #2A2B2D;
+  background-color: rgba(44, 43, 43, 0.9);
   padding: 20px;
   margin: 20px auto;
   border-radius: 8px;
@@ -69,7 +69,6 @@ section {
 
 a {
   text-decoration: none;
-
   color: #FFFFFF;
   font-size: 1.1rem;
 }
@@ -116,7 +115,7 @@ ul {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
-  background-color: #2A2B2D;
+
   border-top: solid #525359;
   width: 100%;
   max-width: 700px;
@@ -224,32 +223,49 @@ i.fa {
 }
 
 footer {
-  display: flex;
   width: 100%;
-  height: 60px;
-  background-color: #2A2B2D;
-  align-items: center; 
-  justify-content: flex-end;
-  position: relative;
-  bottom: 0;
-  
+  background-color: #202123;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
 }
-footer p {
-  margin-right: 4rem;
-  color: #FFFFFF;
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content span {
+  margin: 5px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-content a {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footer-content b {
+  color: #0099ff;
+}
+
+.underlined-footer-content {
+  border-bottom: solid #0099ff;
+  height: 70px;
+  align-content: center;
 }
 
 #tymy h1 { 
   color: #FFFFFF;
-}
-
-#tymy h1 {
   margin-top: 0;
 }
 
 .tym {
   background-color: #2A2B2D;
-  margin: 20px 10px 20px 10px;
+  margin: 20px 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
   text-align: center;
   padding: 15px;
@@ -278,7 +294,7 @@ footer p {
   aspect-ratio: 3/2;
   object-fit: cover;
   border-radius: 10px;
-  transition: transform 0.3s ease-in-out, box shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .img-fotogalerie:hover {
@@ -373,6 +389,9 @@ footer p {
 
 .tym {
     padding: 15px;
+    margin: 0 10px;
+    box-shadow: none;
+    border-radius: 0;
 }
 
   #nadchazejici-zapasy {
@@ -394,6 +413,19 @@ footer p {
   .tym p {
     margin: 10px 25px;
   }
+
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer-content span {
+    margin-bottom: 0;
+    border-bottom: solid #0099ff;
+    height: 90px;
+    align-content: center;
+}
+
 }
 
 
