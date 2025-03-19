@@ -1,19 +1,6 @@
+
 const btNav = document.getElementById('bt-nav');
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  const buttons = document.querySelectorAll(".bt-fotogalerie");
-
-  buttons.forEach(button => {
-      button.addEventListener("click", function () {
-        console.log("dobry");
-      });
-  });
-  
-  
-});
-
-
+const spanCloseModal = document.getElementById('close-modal');
 
 const handleResize = () => {
     const btNav = document.getElementById('bt-nav');
@@ -27,6 +14,34 @@ const handleResize = () => {
       hideElement(nav);
     }
 };
+
+document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.img-fotogalerie');
+    const modal = document.getElementById('modal');
+
+    buttons.forEach(button => { button.addEventListener('click',function (){
+      //pomoci this zobrazim ten img, na ktery jsem kliknul
+        const img = document.getElementById('modal-image');
+        const modalBackground = document.querySelector('#body-fotogalerie');
+        img.src = this.src;
+        this.classList.add('modal-content');
+        console.log(this);
+        modalBackground.className = "modal-background";
+        
+        showElement(modalBackground);
+        showElement(modal);
+      });
+   });
+});
+
+function closeModal() {
+  const modalBackground = document.querySelector('#body-fotogalerie');
+  const modal = document.getElementById('modal');
+  modalBackground.className = "body-fotogalerie"
+  hideElement(modal);
+
+}
+
 
 function navMouseOver() {
     const item = document.getElementById('bt-nav');
@@ -75,10 +90,6 @@ function navMouseClicked() {
     }
 }
 
-function zoomImage() {
-  alert("ca");
-    const img = document.getElementById('');
-}
 
 window.addEventListener('load',handleResize);
 window.addEventListener('resize', handleResize);

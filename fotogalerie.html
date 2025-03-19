@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 
-<body id="body-fotogalerie">
+<body class="body-fotogalerie" id="body-fotogalerie">
     <header>
        
         <div class="header-container">
@@ -33,11 +33,14 @@
                 <li><a id="current-page"  href="fotogalerie.html">Fotogalerie</a></li>
                 
             </ul>
-       </nav>
-       
+        </nav>
     </header>
     
-    <main>
+    <main>  
+        <div id="modal" class="hidden">
+            <span class="close" id="close-modal">&times;</span>
+            <img class="modal-content" id="modal-image">
+        </div>
 
             <section id="gallery">
                     <button class="bt-fotogalerie"><img src="images/gallery/482014344_1168191535102143_2879194008876224950_n.jpg" alt="obrazek1" class="img-fotogalerie"></button>
