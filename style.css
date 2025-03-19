@@ -5,6 +5,7 @@ body {
   color: #FFFFFF;
   font-family: Arial, sans-serif;
   position: relative;
+  
 }
 
 body::before {
@@ -15,7 +16,7 @@ body::before {
   width: 100vw;
   height: 100vh;
   background: url("images/482086951_1168191608435469_5323497860288220619_n.jpg") center/cover no-repeat;
-  z-index: -2;
+  z-index: -1;
 }
 
 body::after {
@@ -32,12 +33,6 @@ body::after {
 
 #body-fotogalerie::after {
   background-color: #202123;
-  z-index: -1;
-}
-
-.modal-background::after {
-  background-color:#7c7b7bb5;
-  z-index: 0;
 }
 
 header {
@@ -137,10 +132,14 @@ ul {
 .header-container {
   display: flex;
   position: relative;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 15px;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
 }
 
 header img {
@@ -208,7 +207,6 @@ i:hover {
   background-color: #202123;
   position: absolute;
   padding: 5px;
-  cursor: pointer;
 }
 
 #menu-icon {
@@ -298,37 +296,12 @@ footer {
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  cursor: pointer;
 }
 
 .img-fotogalerie:hover {
   transform: scale(1.1);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
-
-#modal {
-  position: absolute;
-  align-items: center;
-  z-index: 1;
-}
-
-.modal-content {
-  max-width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-  text-align: center
-}
-
-.close {
-  position: absolute;
-  top: 0px;
-  right: 10px;
-  font-size: 40px;
-  cursor: pointer;
- 
-}
-
-
 
 @media (min-width: 460px) {
   .footer-content {
@@ -454,20 +427,6 @@ footer {
     border-bottom: none;
   }
 
-  .modal-content {
-    width: 90%;
-    max-height: 90vh;
-    align-self: center;
-  }
-  
-  
-.close {
-  top: -80px;
-  right: 30px;
-  font-size: 50px;
-  padding: 0 10px;
-  background-color: #0099ff;
-}
 }
 
 
