@@ -1,6 +1,5 @@
 
 const btNav = document.getElementById('bt-nav');
-const spanCloseModal = document.getElementById('close-modal');
 
 const handleResize = () => {
     const btNav = document.getElementById('bt-nav');
@@ -16,31 +15,35 @@ const handleResize = () => {
 };
 
 document.addEventListener('DOMContentLoaded', function() {
-    const buttons = document.querySelectorAll('.img-fotogalerie');
+    const images = document.querySelectorAll('.img-fotogalerie');
     const modal = document.getElementById('modal');
+    const closeModalSpan = document.getElementById('close-modal');
+    const modalImg = document.getElementById('modal-image');
+    const modalBackground = document.querySelector('#body-fotogalerie');
 
-    buttons.forEach(button => { button.addEventListener('click',function (){
-      //pomoci this zobrazim ten img, na ktery jsem kliknul
-        const img = document.getElementById('modal-image');
-        const modalBackground = document.querySelector('#body-fotogalerie');
-        img.src = this.src;
-        this.classList.add('modal-content');
-        console.log(this);
+    images.forEach(image => { image.addEventListener('click',function (){
+        modal.style.display = "flex";
+        modal.className = "";
+        modalImg.src = this.src;
         modalBackground.className = "modal-background";
-        
         showElement(modalBackground);
-        showElement(modal);
       });
    });
+
+    closeModalSpan.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', function(event) {
+      if (event.target === modal) {
+        closeModal();
+      }
+    })
+
+   function closeModal() {
+    modal.style.display = "none";
+  
+    //const modalBackground = document.querySelector('#body-fotogalerie');
+  }
 });
-
-function closeModal() {
-  const modalBackground = document.querySelector('#body-fotogalerie');
-  const modal = document.getElementById('modal');
-  modalBackground.className = "body-fotogalerie"
-  hideElement(modal);
-
-}
 
 
 function navMouseOver() {
@@ -93,8 +96,6 @@ function navMouseClicked() {
 
 window.addEventListener('load',handleResize);
 window.addEventListener('resize', handleResize);
-
-spanCloseModal.addEventListener('click', closeModal);
 
 btNav.addEventListener('mouseover', navMouseOver);
 btNav.addEventListener('mouseleave', navMouseLeave);

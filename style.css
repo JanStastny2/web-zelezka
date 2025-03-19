@@ -98,10 +98,6 @@ p {
   margin-bottom: 10px;
 }
 
-span {
-  color: #FFFFFF;
-}
-
 strong {
   color: #c2bb96; 
 }
@@ -307,25 +303,35 @@ footer {
 }
 
 #modal {
-  position: absolute;
+  position: fixed;
+  height:100%;
+  width: 100%;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  background-color: #4d4d4dbd;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  z-index: 1;
 }
 
 .modal-content {
-  max-width: 100%;
+  position: fixed;
+  max-width: 100vw;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
   text-align: center
 }
 
-.close {
+#close-modal {
   position: absolute;
   top: 0px;
   right: 10px;
   font-size: 40px;
+  padding: 0 7px;
   cursor: pointer;
- 
+  z-index: 1000;
+  background-color: #7171715c;
 }
 
 
@@ -455,17 +461,24 @@ footer {
   }
 
   .modal-content {
-    width: 90%;
+    width: auto;
+    max-width: 90vw;
     max-height: 90vh;
     align-self: center;
   }
   
   
-.close {
-  top: -80px;
-  right: 30px;
+#close-modal {
   font-size: 50px;
   padding: 0 10px;
+  background-color: #2A2B2D;
+  top: 0px;
+  right: 10px;
+  z-index: 1000;
+}
+
+
+#close-modal:hover {
   background-color: #0099ff;
 }
 }
