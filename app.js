@@ -25,18 +25,22 @@ document.addEventListener('DOMContentLoaded', function() {
         modal.style.display = "flex";
         modal.className = "";
         modalImg.src = this.src;
+        showElement(modalImg);
         modalBackground.className = "modal-background";
         showElement(modalBackground);
       });
    });
 
+  if (modal) {
     closeModalSpan.addEventListener('click', closeModal);
-
     modal.addEventListener('click', function(event) {
       if (event.target === modal) {
         closeModal();
       }
-    })
+    });
+  }
+
+
 
    function closeModal() {
     modal.style.display = "none";
