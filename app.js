@@ -1,5 +1,6 @@
 
 const btNav = document.getElementById('bt-nav');
+const formPrihlaska = document.getElementById('form-prihlaska');
 
 const handleResize = () => {
     const btNav = document.getElementById('bt-nav');
@@ -14,19 +15,25 @@ const handleResize = () => {
     }
 };
 
+//kdyz kliknu na ten 
+
 document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('.img-fotogalerie');
     const modal = document.getElementById('modal');
     const closeModalSpan = document.getElementById('close-modal');
     const modalImg = document.getElementById('modal-image');
-    const modalBackground = document.querySelector('#body-fotogalerie');
-
+    let modalBackground;
+    if (document.querySelector('#body-fotogalerie')) {
+       modalBackground = document.querySelector('#body-fotogalerie');
+    } modalBackground = document.querySelector('body');
+    console.log(modalBackground);
+    
     images.forEach(image => { image.addEventListener('click',function (){
         modal.style.display = "flex";
         modal.className = "";
         modalImg.src = this.src;
         showElement(modalImg);
-        modalBackground.className = "modal-background";
+        modalBackground.classList.add('modal-background');
         showElement(modalBackground);
       });
    });
@@ -36,18 +43,22 @@ document.addEventListener('DOMContentLoaded', function() {
     modal.addEventListener('click', function(event) {
       if (event.target === modal) {
         closeModal();
+        modalBackground.classList.remove('modal-background');
       }
     });
   }
 
-
-
    function closeModal() {
     modal.style.display = "none";
-  
-    //const modalBackground = document.querySelector('#body-fotogalerie');
+    modalBackground.classList.remove('modal-background');
   }
 });
+
+function editTraining() {
+  const startTime = document.getElementById('');
+  const endTime = document.getElementById('');
+  const date = document.getElementById('');
+}
 
 
 function navMouseOver() {
@@ -80,6 +91,10 @@ function showElement(element) {
   return element;
 }
 
+function showNabor() {
+  
+}
+
 function navMouseClicked() {
     const item = document.getElementById('nav');
     const closeIcon = document.getElementById('close-icon');
@@ -97,6 +112,23 @@ function navMouseClicked() {
     }
 }
 
+function submitApplication() {
+  alert("Přihláška byla úspešně odeslána, těšíme se na Vás!" )
+
+  const jmeno = document.getElementById('jmeno');
+  const rocnik =  document.getElementById('rocnik-narozeni');
+  const email =  document.getElementById('email');
+
+  jmeno.value = "";
+  rocnik.value = 2020;
+  email.value = "";
+}
+
+
+formPrihlaska.addEventListener('submit', (e) =>{
+  e.preventDefault();
+  submitApplication();
+});
 
 window.addEventListener('load',handleResize);
 window.addEventListener('resize', handleResize);

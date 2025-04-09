@@ -38,18 +38,37 @@
     </header>
     
     <main>
+        <div id="modal" class="hidden">
+            <div class="modal-container">
+              <span class="close" id="close-modal">&times;</span>
+              <img src="images/background.jpg" class="modal-content" id="modal-image" alt="fotka" hidden>
+            </div>
+          </div>
+
         <div id="tymy">
             <h1>Týmy</h1>
             <div class="seznam-tymu">
+
                  <section class="tym">
-                    <img src="images/nabor.jpg" alt="obrazek">
-                    <form>
+                    <img src="images/nabor.jpg" id="img-nabor" class="img-fotogalerie" alt="obrazek">
+                    <form class="prihlaska" id="form-prihlaska">
+                        <h3>Přihláška</h3>
                         <label for="jmeno">
-                            Vaše jméno
-                        </label>
-                        <input type="text" id="jmeno">
+                            Jméno a příjmení
+                        </label>  <br>
+                        <input type="text" placeholder="Tomášek Novák" id="jmeno" required> <br>
+                        <label for="vek">
+                            Ročník narození
+                        </label> <br>
+                        <input type="number" value="2020" min="2010" max="2025" id="rocnik-narozeni" required> <br>
+                        <label for="email">
+                            Váš email
+                        </label> <br>
+                        <input type="email" placeholder="pepanovak@seznam.cz" id="email" required> <br>
+                        <input type="submit">
                     </form>
                 </section>
+
                 <section class="tym">
                     <h2 id="a-tym">Muži A</h2>
                     <p>Tým Muži A se v letošní sezóně účastní Královéhradeckého krajského přeboru a předvádí vyrovnané výkony. Sezónu zahájil napínavým duelem proti SK Jičín, který skončil těsnou porážkou 1:2. V dalších zápasech si připsal remízu 1:1 proti TJ Sokol Třebeš a v MOL Cupu se střetl s Slavií Hradec Králové, kde bohužel podlehl 0:2. Po 16 kolech se tým nachází na 6. místě tabulky s 24 body, což dává naději na silný závěr sezóny. Každý zápas je výzvou a naši hráči bojují o co nejlepší umístění!</p>
@@ -96,7 +115,7 @@
                 <a>Za hřištěm 92 <br> Železnice 507 13</a>
             </span>
             <span>
-                <a>&copy;Jan Šťastný</a>
+                <a>&copy;Jan Šťastný 2025</a>
             </span>
         </div>
     </footer>
