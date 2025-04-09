@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TJ Sokol Železnice</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img id="logo" src="images/logo.png" alt="Obrazek-logo">
+            <button id="bt-nav" aria-label="true">
+                <span id="menu-icon"> 
+                    <i class="fas fa-bars" ></i>
+                </span>
+                <span id="close-icon" hidden>
+                    <i class="fa fa-times"></i>
+                </span>
+            </button>
+       </div>
+       <h1>TJ Sokol Železnice</h1>
+       <nav id="nav" hidden>
+            <ul>
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="oklubu.html">O klubu</a></li>
+                <li><a href="tymy.html">Týmy</a></li>
+                <li><a id="current-page" href="prihlasky.html">Přihlášky</a></li>
+                <li><a href="fotogalerie.html">Fotogalerie</a></li>
+            </ul>
+       </nav>
+    </header>
+    
+    <main>
+        <section class="content-wrapper">
+            <div id="modal" class="hidden">
+                <div class="modal-container">
+                  <span class="close" id="close-modal">&times;</span>
+                  <img src="images/background.jpg" class="modal-content" id="modal-image" alt="fotka" hidden>
+                </div>
+            </div>
+
+          <div class="form-container">
+            <form class="prihlaska" id="form-prihlaska">
+              <h3>Přihláška</h3>
+              
+              <div class="form-group">
+                <label for="jmeno">Jméno a příjmení</label>
+                <input type="text" id="jmeno" placeholder="Tomášek Novák" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="rocnik-narozeni">Ročník narození</label>
+                <input type="number" id="rocnik-narozeni" value="2020" min="2010" max="2025" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Váš email</label>
+                <input type="email" id="email" placeholder="pepanovak@seznam.cz" required>
+              </div>
+              
+              <div class="form-group">
+                <input type="submit" value="Odeslat přihlášku">
+              </div>
+            </form>
+          </div>
+          
+          <div class="image-container">
+            <img src="images/nabor.jpg" id="img-nabor" class="img-fotogalerie" alt="Obrázek přihlášky">
+          </div>
+        </section>
+      </main>
+      
+    
+    
+    <footer>
+        <div class="footer-content">
+            <span class="underlined-footer-content">
+                <a href="mailto:fotbal@sokolzeleznice.cz"> <b>Kontakt:</b>  <br> fotbal@sokolzeleznice.cz</a>
+            </span>
+            <span class="underlined-footer-content">
+                <b>Adresa:</b> <br>
+                <a>Za hřištěm 92 <br> Železnice 507 13</a>
+            </span>
+            <span>
+                <a>&copy; 2025 Jan Šťastný.</a>
+            </span>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

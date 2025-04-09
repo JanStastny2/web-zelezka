@@ -15,7 +15,6 @@ const handleResize = () => {
     }
 };
 
-//kdyz kliknu na ten 
 
 document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('.img-fotogalerie');
@@ -26,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('#body-fotogalerie')) {
        modalBackground = document.querySelector('#body-fotogalerie');
     } modalBackground = document.querySelector('body');
-    console.log(modalBackground);
     
     images.forEach(image => { image.addEventListener('click',function (){
         modal.style.display = "flex";
@@ -48,17 +46,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-   function closeModal() {
+  function closeModal() {
     modal.style.display = "none";
     modalBackground.classList.remove('modal-background');
   }
 });
-
-function editTraining() {
-  const startTime = document.getElementById('');
-  const endTime = document.getElementById('');
-  const date = document.getElementById('');
-}
 
 
 function navMouseOver() {
@@ -91,44 +83,42 @@ function showElement(element) {
   return element;
 }
 
-function showNabor() {
-  
-}
 
 function navMouseClicked() {
-    const item = document.getElementById('nav');
-    const closeIcon = document.getElementById('close-icon');
-    const menuIcon = document.getElementById('menu-icon');
+  const item = document.getElementById('nav');
+  const closeIcon = document.getElementById('close-icon');
+  const menuIcon = document.getElementById('menu-icon');
 
-    if (item.getAttribute('hidden') !== null) {
-      showElement(item);
-      hideElement(menuIcon);
-      showElement(closeIcon);
-    }
-    else {
-      hideElement(item); 
-      hideElement(closeIcon);
-      showElement(menuIcon);
-    }
+  if (item.getAttribute('hidden') !== null) {
+    showElement(item);
+    hideElement(menuIcon);
+    showElement(closeIcon);
+  }
+  else {
+    hideElement(item); 
+    hideElement(closeIcon);
+    showElement(menuIcon);
+  }
 }
 
 function submitApplication() {
-  alert("Přihláška byla úspešně odeslána, těšíme se na Vás!" )
 
   const jmeno = document.getElementById('jmeno');
   const rocnik =  document.getElementById('rocnik-narozeni');
   const email =  document.getElementById('email');
+  alert(jmeno.value + " je úspešně přihlášený, těšíme se na Vás!" )
 
   jmeno.value = "";
   rocnik.value = 2020;
   email.value = "";
 }
 
-
-formPrihlaska.addEventListener('submit', (e) =>{
-  e.preventDefault();
-  submitApplication();
-});
+if (formPrihlaska) {
+  formPrihlaska.addEventListener('submit', (e) =>{
+    e.preventDefault();
+    submitApplication();
+  }); 
+}
 
 window.addEventListener('load',handleResize);
 window.addEventListener('resize', handleResize);
