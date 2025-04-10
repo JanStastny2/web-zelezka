@@ -5,6 +5,7 @@ html {
 
 main {
   min-height: 100%;
+  flex: 1;
 }
 
 body {
@@ -18,7 +19,6 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 body::before {
@@ -103,7 +103,6 @@ section h2 {
 }
 
 .tym {
-  margin: 20px 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
   text-align: center;
   padding: 15px;
@@ -132,6 +131,10 @@ ul {
   margin: 0;
   padding: 0;
   width: 70vw;
+}
+
+#aktuality {
+  padding: 20px 0;
 }
 
 #aktuality a {
@@ -205,10 +208,12 @@ nav {
   margin-bottom: 25px;
 }
 
+
 nav a {
   display: block;
   padding: 30px 0 30px;
   width: 100%;
+  border-radius: 10px;
 }
 
 nav a:hover {
@@ -333,6 +338,11 @@ footer {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+#img-nabor:hover {
+  transform: none;
+  box-shadow: none;
+}
+
 #modal {
   position: fixed;
   height:100%;
@@ -372,6 +382,8 @@ footer {
   flex-direction: column;
   gap: 40px;
   max-width: 1200px;
+  padding: 30px 0;
+
 }
 
 
@@ -458,10 +470,16 @@ form.prihlaska input[type="submit"]:hover {
   border-radius: 10px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   cursor: pointer;
+
 }
 
 .image-container {
+  margin: 0 20px 0 20px  ;
   height: auto;
+}
+
+#nadchazejici-zapasy {
+  padding: 20px 0;
 }
 
 
@@ -528,9 +546,6 @@ form.prihlaska input[type="submit"]:hover {
     margin-right: 0;
   }
 
-  #nadchazejici-zapasy {
-    flex: 2;
-  }
   #aktuality ul {
     width: auto;
   } 
@@ -554,6 +569,7 @@ form.prihlaska input[type="submit"]:hover {
   }
 
   #nadchazejici-zapasy {
+    flex: 2;
     padding: 0;
     margin: 20px;
   }
@@ -619,6 +635,11 @@ form.prihlaska input[type="submit"]:hover {
 
   .image-container {
     margin: 30px 0;
+  }
+
+  .form-container {
+    margin: 30px 0 ;
+    width: auto;
   }
 
   form.prihlaska {
