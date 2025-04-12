@@ -542,8 +542,9 @@ form.prihlaska input[type="submit"]:hover {
 
   #aktuality {
     text-align: left;
-    max-width: 400px;
-    margin-right: 0;
+    background-color: rgba(32, 33, 35, 0.85);
+    min-width: 400px;
+    padding: 30px;
   }
 
   #aktuality ul {
@@ -551,7 +552,12 @@ form.prihlaska input[type="submit"]:hover {
   } 
 
   #main-obsah {
+    max-width: 1200px;
+    background-color: rgba(44, 43, 43, 0.9);
+    border-radius: 10px;
+    margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 
@@ -569,8 +575,10 @@ form.prihlaska input[type="submit"]:hover {
   }
 
   #nadchazejici-zapasy {
+    background-color: rgba(32, 33, 35, 0.85);
+    min-width: 400px;
     flex: 2;
-    padding: 0;
+    padding: 30px;
     margin: 20px;
   }
 
